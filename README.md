@@ -15,10 +15,7 @@ A continuación, enseñaremos la única pieza _"añadida"_ a Bitcoin: __SegWit__
 
 
 Para terminar veremos la primera sidechain creada sobre SegWit llamada __Lightning Network__, que añade a BTC un sistema de _stake_ bastante diferente del que se plantea en otras blockchain. Para usarla y bastará con una App para móviles llamada __Eclair__. Con ella, ya podremos crear los canales y todo lo que hace falta para usar LN. Así que acabaremos esta parte con una pequeña práctica para probarlo entre nosotros, y pasarnos unos cuantos ___satoshis___.
-
-
 ![Con titulo](pictures/LOGO_LN.png "Lightning Network")
-
 Con esto, esperamos explicar:
 1. La _rama_ que representa __Bitcoin__ en el mundo de la blockchain,
 2. Veremos el funcionamiento del __PoS__ en el concepto de BTC,
