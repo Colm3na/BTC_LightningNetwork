@@ -1,39 +1,43 @@
-La idea se planteó hace más de 3 años y fue implementada finalmente en verano del 2017 coincidiendo también con el nacimiento de Bitcoin cash precisamente como alternativa a segwit.
+La idea se tuvo hace más de 3 años y fue implementada finalmente en verano del 2017 coincidiendo también con el nacimiento de _Bitcoin cash_ precisamente como alternativa a __Segwit__.
 
-Fue implementada como un soft fork lo que significa que ningún minero o nodo tuvo que cambiar nada para ser compatible. La transición ha sido progresiva y aún ahora sigue sin ser completamente usada por todos los clientes
+Fue implementada como un __Soft Fork__ lo que significa que es opcional, ningún minero o nodo tuvo que cambiar nada para ser compatible. La transición ha sido progresiva y aún ahora sigue sin ser completamente usada por todos los clientes e implementaciones.
 
-La única actualización real en bitcoin hay que entenderla desde lo que es un bloque
+La única actualización real en bitcoin hay que entenderla desde lo que es un bloque. Formado por ___la hoja de cálculo de transacciones___ y la ___cabecera del bloque___.
 
-   Imagen de bloque de UTXO
+![Con titulo](pictures/Diagrama_UTXO "Imagen de bloque de UTXO")
 
-Cuándo Satoshi creo bitcoin creo un parámetro en la cabecera del bloque llamado block site pensando precisamente en la necesidad de crear bloques más grandes que permitieran la transmisión de más transacciones
+Cuándo Satoshi creo Bitcoin creo un parámetro en la cabecera del bloque llamado __Block Size__. Pensando, precisamente, en la necesidad  futura de crear bloques más grandes, que permitieran la transmisión de más transacciones por bloque.
 
-Sin embargo Satoshi abandona bitcoin al menos públicamente en 2011 debido a que se estaba especulando con el valor mucho antes y de manera mucho más profesional de lo que él había imaginado. Antes de que bitcoin fuese algo realmente usable y usado se habían creado empresas basadas en el concepto de Minería a través de la realización de pruebas de trabajo mediante Asics.
+Sin embargo, Satoshi abandona Bitcoin (al menos públicamente) en 2011, debido a que se estaba especulando con el valor mucho antes y de manera mucho más profesional de lo que él había imaginado. Antes de que Bitcoin fuese algo usado se habían creado empresas basadas en el concepto de minería a través de la realización de pruebas de trabajo mediante ___ASICS___.
 
-Eso hizo pensar a los desarrolladores de Bitcoin que sí y van aumentando el blog site constantemente siendo para ello necesario un hard fork enterarían de manera irremediable la dispersión de información por la red favoreciendo a las concentraciones creadas por las empresas de minería
+Eso hizo pensar a los desarrolladores de Bitcoin que sí iban aumentando el tamaño de bloque constantemente, siendo para ello necesario un __Hard fork__ (requiere actualización sincronizada entre los mineros). Comprometerían, de manera irremediable, la dispersión de información por la red. Favoreciendo, aún más, a las concentraciones creadas por las empresas de minería.
 
-Todo esto estaba planteado desde un principio en bitcoin y aunque en eterium y en muchas otras blockchain se considera un error lo de los Asics en bitcoin es el camino que se decidió tomar desde un principio
+Todo esto estaba planteado desde un principio en Bitcoin y aunque en eterium y en muchas otras blockchain se considera un error lo de los Asics en bitcoin es el camino que se decidió tomar desde un principio.
 
-Sin embargo esta profesionalización se ha realizado de manera más salvaje y mucho antes de lo que hubiese sido correcto para que la función del blog site fuese algo progresivo y natural para no perder la descentralización
+Sin embargo esta profesionalización se ha realizado de manera más salvaje y mucho antes de lo que hubiese sido correcto, para que la función del __Block Size__ fuese algo progresivo, natural y no perder la descentralización.
 
-Es por eso que aunque el proceso de aumentar el tamaño del bloque es algo que se hará y resultaba un paso evidente para todos se decidió implementar antes una solución de escalabilidad diferente es esto a lo que se le llama segwit o vulnerabilidad segregada
+Es por eso que aunque el proceso de aumentar el tamaño del bloque es algo que se hará, y resultaba un paso evidente para tod@s, se decidió implementar antes una solución de escalabilidad diferente. Es esto a lo que se le llama __SegWit__ o __vulnerabilidad segregada__.
 
-En realidad es un cambio en las reglas a la hora de medir el peso del bloque.
+__En realidad es un cambio en las reglas a la hora de medir el peso del bloque.__
 
-Hasta segwit el bloque se media incluyendo el timestamp el origen el destino la cantidad y el campo de notas. Consequir el campo de notas se apilan en la primera transaccion mediante un separador que permite después al cliente volver a desplegar lo ha pirado y colocarle cada nota a su transacción original
+Hasta __SegWit__, el bloque se media incluyendo: __el timestamp, el origen, el destino, la cantidad y el campo de notas__ (___HEX Data Input___). Con __SegWit__: las notas se apilan en la primera transaccion mediante un separador, que permite después al cliente (que acepta __SegWit__) volver a desplegar lo ha apilado y colocarle cada nota a su transacción original.
 
-Eso deja el resto de campos de notas libres y no contabilizados como peso en el bloque.
+Eso deja el resto de campos de notas libres y __no contabilizados como peso en el bloque__.
 
-En primer lugar se puede utilizar el campo de notas para añadir nuevas transacciones en este caso utilizando entre sus partes separadores de nuevo para que el cliente vuelva a hacer el despliegue. Esto hace que un bloque que utiliza segwit o minado mediante segwit utilicé un blog site de 1 MB pero en realidad pese 2 MB o un poco más. Y por tanto que se lleven el doble de transacciones por bloque.
+En primer lugar se puede utilizar el campo de notas para añadir nuevas transacciones. En este caso utilizando entre sus partes separadores, de nuevo para que el cliente vuelva a hacer el despliegue. Esto hace que un bloque que ha sido minado utilizando __SegWit__ tiene un __Block Size__ de __1 MB__ pero en realidad pesa __2 MB__ o un poco más. Y por tanto, caben el doble de transacciones por bloque.
 
-Lógicamente esto parece no tener ninguna utilidad y ese fue el cabreo principal de los seguidores de Bitcoin cash se estaban cambiando las reglas creadas por Satoshi cuando había una solución más sencilla ya planteada para conseguir lo mismo.
+Lógicamente, esto parece no tener ninguna utilidad y ese fue el cabreo principal de los seguidores de __Bitcoin Cash__: se estaban cambiando las reglas creadas por Satoshi cuando había una solución más sencilla ya planteada para conseguir lo mismo.
 
-Sin embargo como ahora veremos con lightning network, segwit permite algo mucho más potente pues en ese espacio que queda libre utilizando, eso sí, bitcoin script, se pueden crear otros Smart contracts que no sean transacciones sencillas.
+Sin embargo, como ahora veremos con __Lightning Network__, __SegWit__ permite algo mucho más potente. Pues en ese espacio que queda libre, utilizando __Bitcoin Script__, se pueden crear otros ___Smart Contracts___ que no sean transacciones simples.
 
-Segwit convierte a la capa de Bitcoin con su proof of work en una capa base sobre la qué anidar side chains en la mitad del espacio de cada bloque, la otra mitad es para mandar transacciones, probablemente en el futuro estas transacciones pagarán una cantidad de tasas muy grandes (de cientos de €). Precisamente para mandar cantidades ingentes de dinero de una forma ultra segura y quedando las sidechains para todo lo demás.
+__Segwit__ convierte a la capa de __Bitcoin__, con su __Proof of Work__ en una capa base sobre la qué anidar __sidechains__: en la mitad del espacio de cada bloque. Y en la otra mitad, es para mandar transacciones. Probablemente en el futuro estas transacciones pagarán una cantidad de tasas muy grandes (de cientos de €). Precisamente para mandar cantidades ingentes de dinero de una forma ultra segura y quedando las sidechains para todo lo demás.
 
-Eso si estás side chains presentan dos "problemas":
-El primero es que DEBEN ser escritas con bitcoin script el cual es un lenguaje bastante complicado. Sin embargo esto puede no ser tan problema como parece en un principio, debido a qué Bitcoin a diferencia de Ethereum está pensado para sustituir al sistema financiero, no para sustituir al sistema mercantil. Y en el sistema financiero lo que es obligatorio es la seguridad y no la flexibilidad. Por poner un ejemplo el sistema similar a ethereum pero pensado para el mundo financiero es Cardano que está creando una máquina virtual para un derivado de Haskell, Plutus. Que viene a ser un lenguaje intermedio entre bitcoin script y solidity. Es decir, Turing Complete pero ultra seguro y deterministico.
-El segundo problema es que a diferencia del concepto de token dónde con un poquito de ether creamos la cantidad que queramos de nuestro nuevo dinero. En el caso de las sidechains sobre Bitcoin tenemos que congelar la misma cantidad de Bitcoin que aquello que queramos utilizar en nuestras sidechain, aunque la llamemos liquid bitcoin o lightning bitcoin, siempre tendremos un valor de 1 a 1 entre el Token y la criptomoneda base. Esto hace que no sirva como sistema de financiación, sino que traspasa o directamente aumenta el valor especulativo sobre la criptomoneda base, bitcoin.
+Eso si estás __sidechains__ presentan dos "_problemas_":
 
-Es por tanto que en realidad estos dos problemas son en realidad, de la misma forma que la lentitud y rigidez, el principal punto fuerte de Bitcoin cómo sistema financiero digital.
+- El primero es que deben ser escritas con __Bitcoin Script__. El cual, es un lenguaje bastante complicado. Sin embargo esto puede no ser tan problema como parece en un principio, debido a qué __Bitcoin__ a diferencia de __Ethereum__ está pensado para sustituir al __Sistema Financiero__, no para sustituir al __Sistema Mercantil__. Y en el sistema financiero lo que es obligatorio es la __seguridad y no la flexibilidad__. _Por poner un ejemplo el sistema similar a Ethereum pero pensado para el mundo financiero es Cardano que está creando una máquina virtual para un derivado de Haskell, Plutus. Que viene a ser un lenguaje intermedio entre Bitcoin Script y Solidity. Es decir, Turing Complete pero ultra seguro y deterministico__.
+
+- El segundo problema es que a diferencia del concepto de ___token___ dónde con un poquito de __ether__ creamos la cantidad que queramos de nuestro nuevo dinero. En el caso de las sidechains sobre Bitcoin tenemos que congelar la misma cantidad de Bitcoin que aquello que queramos utilizar en las sidechains, aunque la llamemos ___liquid bitcoin___ o ___lightning bitcoin___, siempre tendremos un valor de 1 a 1 entre el token y la criptomoneda base.
+
+Esto hace que no sirva como sistema de financiación, sino que traspasa (y aumenta) el valor especulativo sobre la criptomoneda base, __bitcoin__.
+
+Es por tanto que en realidad estos dos _problemas_ son en realidad, de la misma forma que la lentitud y rigidez, el principal punto fuerte de Bitcoin cómo __Sistema Financiero Digital__.
