@@ -5,21 +5,21 @@ La primera blockchain creada por Satoshi fue hecha con un objetivo concreto espe
 Es bastante probable que su fundador y sus precursores no tuviese ni idea de la nueva rama del conocimiento que estaban creando
 Aunque desde el principio se crearon múltiples alternativas, no fue hasta la llegada de Ethereum, que el mundo "entendió" que la blockchain podía utilizarse para mucho más.
 
-      Imagen de BC con PoW > SC
+![Con titulo](pictures/BCconPoWvsBCconSC "De la capa 1 a la 1,5")
 
 Su objetivo principal y puede que el único era el de crear dinero efectivo o cash digital que pudiese ser producido progresivamente por los mantenedores de la red y poseído por los propios usuarios en lugar de mediante bancos o intermediarios
 Para ello creo y uso varios componentes ya existentes, en algunos casos creados con el mismo objetivo en intentos fallidos anteriores :
 - La implementación .de un cliente para leer y participar en el proceso que con el tiempo ha acabado en lo que se conoce como bitcoin core
 
-      Imagen bitcoin core
+![Con titulo](pictures/Bitcoin_Core "Implementación de Bitcoin Core")
 
 - un lenguaje de programación completamente tipado y deterministico pensado para asegurar el la correcta transmisión de activos sin perdidas ni posibilidades de doble gasto y no ser Turing complete e impedir la creación de bucles que saturaran la red
 
-       Imagen de Bitcoin script
+![Con titulo](pictures/Bitcoin_Script "Bitcoin Script")
 
 - Y el más importante es el que conocemos como blockchain,
 
-       Imagen de la blockchain
+![Con titulo](pictures/Diagrama_Blockchain "Cadena de Bloques de Bitcoin")
 
 Es bastante fácil críticar a la blockchain en general y a bitcoin en particular. Por ser demasiado lento demasiado limitado demasiado difícil de actualizar etcétera pero esa es precisamente la intención de la blockchain a la hora de representar más que un programa un protocolo sobre el que construir.
 Y este es probablemente uno de los puntos fuertes de Bitcoin
