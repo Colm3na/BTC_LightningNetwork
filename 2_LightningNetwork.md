@@ -15,7 +15,8 @@ Son los mineros de la Capa 1, es decir de __Bitcoin__, los que aseguran mediante
 Esto significa que tenemos una capa 1 con una seguridad desproporcionada y una capa 2 con una seguridad completamente disgregada y asegurada. No hay necesidad de montar capas de proof of work encima o detener nuevos dispositivos haciendo caros procesos.
 
 _______________________________
-
+PRÁCTICA
+_______________________________
 
 Hay dos formas de usarlo la  y más fácil es la que vamos a utilizar hoy qué consiste en descargarse una aplicación llamada [Eclair](http://joedicastro.com) que permite usarlo directamente tirando de un nodo completo que está en otra parte.
 1. Descargaremos la aplicación de [Eclair](http://joedicastro.com) en nuestro móvil y la abriremos para que se sincronice
