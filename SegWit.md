@@ -10,11 +10,11 @@ Cuándo Satoshi creo Bitcoin creo un parámetro en la cabecera del bloque llamad
 
 Sin embargo, Satoshi abandona Bitcoin (al menos públicamente) en 2011, debido a que se estaba especulando con el valor mucho antes y de manera mucho más profesional de lo que él había imaginado. Antes de que Bitcoin fuese algo usado se habían creado empresas basadas en el concepto de minería a través de la realización de pruebas de trabajo mediante ___ASICS___.
 
-Eso hizo pensar a los desarrolladores de Bitcoin que sí iban aumentando el tamaño de bloque constantemente, siendo para ello necesario un __Hard fork__ (requiere actualización sincronizada entre los mineros). Comprometerían, de manera irremediable, la dispersión de información por la red. Favoreciendo, aún más, a las concentraciones creadas por las empresas de minería.
+Eso hizo pensar a los desarrolladores de __Bitcoin__ que sí iban aumentando el tamaño de bloque constantemente, siendo para ello necesario un __Hard fork__ (requiere actualización sincronizada entre los mineros). Comprometerían, de manera irremediable, la dispersión de información por la red. Favoreciendo, aún más, a las concentraciones creadas por las empresas de minería.
 
-Todo esto estaba planteado desde un principio en Bitcoin y aunque en eterium y en muchas otras blockchain se considera un error lo de los Asics en bitcoin es el camino que se decidió tomar desde un principio.
+Todo esto estaba planteado desde un principio en Bitcoin y aunque, en Ethereum y en muchas otras blockchain, lo de usar ___ASICS___ se considera un error. En __Bitcoin__ es el camino que se decidió tomar desde un principio.
 
-Sin embargo esta profesionalización se ha realizado de manera más salvaje y mucho antes de lo que hubiese sido correcto, para que la función del __Block Size__ fuese algo progresivo, natural y no perder la descentralización.
+Sin embargo, esta profesionalización se ha realizado de manera más salvaje y mucho antes de lo que hubiese sido correcto, para que la función del __Block Size__ fuese algo progresivo, natural y no perder la descentralización.
 
 Es por eso que aunque el proceso de aumentar el tamaño del bloque es algo que se hará, y resultaba un paso evidente para tod@s, se decidió implementar antes una solución de escalabilidad diferente. Es esto a lo que se le llama __SegWit__ o __vulnerabilidad segregada__.
 
@@ -22,7 +22,7 @@ __En realidad es un cambio en las reglas a la hora de medir el peso del bloque._
 
 Hasta __SegWit__, el bloque se media incluyendo: __el timestamp, el origen, el destino, la cantidad y el campo de notas__ (___HEX Data Input___). Con __SegWit__: las notas se apilan en la primera transaccion mediante un separador, que permite después al cliente (que acepta __SegWit__) volver a desplegar lo ha apilado y colocarle cada nota a su transacción original.
 
-Eso deja el resto de campos de notas libres y __no contabilizados como peso en el bloque__.
+Eso deja el resto de campo de notas: vacías y __no contabilizadas como peso en el bloque__.
 
 En primer lugar se puede utilizar el campo de notas para añadir nuevas transacciones. En este caso utilizando entre sus partes separadores, de nuevo para que el cliente vuelva a hacer el despliegue. Esto hace que un bloque que ha sido minado utilizando __SegWit__ tiene un __Block Size__ de __1 MB__ pero en realidad pesa __2 MB__ o un poco más. Y por tanto, caben el doble de transacciones por bloque.
 
@@ -34,10 +34,8 @@ __Segwit__ convierte a la capa de __Bitcoin__, con su __Proof of Work__ en una c
 
 Eso si estás __sidechains__ presentan dos "_problemas_":
 
-- El primero es que deben ser escritas con __Bitcoin Script__. El cual, es un lenguaje bastante complicado. Sin embargo esto puede no ser tan problema como parece en un principio, debido a qué __Bitcoin__ a diferencia de __Ethereum__ está pensado para sustituir al __Sistema Financiero__, no para sustituir al __Sistema Mercantil__. Y en el sistema financiero lo que es obligatorio es la __seguridad y no la flexibilidad__. _Por poner un ejemplo el sistema similar a Ethereum pero pensado para el mundo financiero es Cardano que está creando una máquina virtual para un derivado de Haskell, Plutus. Que viene a ser un lenguaje intermedio entre Bitcoin Script y Solidity. Es decir, Turing Complete pero ultra seguro y deterministico__.
+1. Es que deben ser escritas con __Bitcoin Script__. El cual, es un lenguaje bastante complicado. Sin embargo esto puede no ser tan problema como parece en un principio, debido a qué __Bitcoin__ a diferencia de __Ethereum__ está pensado para sustituir al __Sistema Financiero__, no para sustituir al __Sistema Mercantil__. Y en el sistema financiero lo que es obligatorio es la __seguridad y no la flexibilidad__. _Por poner un ejemplo: el sistema similar a Ethereum pero pensado para el mundo financiero es Cardano que está creando una máquina virtual con un derivado de_ ___Haskell => Plutus___. _Que viene a ser un lenguaje intermedio entre_ ___Bitcoin Script___ y ___Solidity___. _Es decir, Turing Complete pero ultra seguro y deterministico_.
 
-- El segundo problema es que a diferencia del concepto de ___token___ dónde con un poquito de __ether__ creamos la cantidad que queramos de nuestro nuevo dinero. En el caso de las sidechains sobre Bitcoin tenemos que congelar la misma cantidad de Bitcoin que aquello que queramos utilizar en las sidechains, aunque la llamemos ___liquid bitcoin___ o ___lightning bitcoin___, siempre tendremos un valor de 1 a 1 entre el token y la criptomoneda base.
-
-Esto hace que no sirva como sistema de financiación, sino que traspasa (y aumenta) el valor especulativo sobre la criptomoneda base, __bitcoin__.
+2. Es que a diferencia del concepto de ___token___ dónde con un poquito de __ether__ creamos la cantidad que queramos de nuestro nuevo dinero. En el caso de las sidechains sobre Bitcoin tenemos que congelar la misma cantidad de Bitcoin que aquello que queramos utilizar en las sidechains, aunque la llamemos ___liquid bitcoin___ o ___lightning bitcoin___, siempre tendremos un valor de 1 a 1 entre el token y la criptomoneda base. Esto hace que no sirva como sistema de financiación, sino que traspasa (y aumenta) el valor especulativo sobre la criptomoneda base, __bitcoin__.
 
 Es por tanto que en realidad estos dos _problemas_ son en realidad, de la misma forma que la lentitud y rigidez, el principal punto fuerte de Bitcoin cómo __Sistema Financiero Digital__.
