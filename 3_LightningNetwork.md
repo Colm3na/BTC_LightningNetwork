@@ -1,6 +1,3 @@
-
-[Cliente de Lightning Network: Eclair](http://joedicastro.com)
-
 __LN__ es la primera implementación de __Segwit__, que ha llevado más de 3 años _(un poco como el huevo y la gallina)_ en el que han participado no solo la Start-Up que la pensó llamada ___Lightning Labs___. Sino muchas otras empresas. _Como dato curioso, se creó un consorcio temporal a principios de año entre los departamentos de calculo computacional de las 70 universidades más potentes del mundo con la intención de valorar la viabilidad del proyecto._
 
 El funcionamiento es el siguiente: utilizando el espacio, del campo de notas, que nos da __SegWit__, abrímos una transacción y metemos un trozo de Smart contract. En un bloque futuro cerraremos la transacción con el resto del Smart contract. Eso significa que gastaremos el doble en tasas para realizar una transacción. Lógicamente esto solo es perder dinero y encima de manera más complicada.
@@ -20,8 +17,8 @@ Esto significa que tenemos una capa 1 con una seguridad desproporcionada y una c
 _______________________________
 
 
-Hay dos formas de usarlo la  y más fácil es la que vamos a utilizar hoy qué consiste en descargarse una aplicación llamada Eclair que permite usarlo directamente tirando de un nodo completo que está en otra parte.
-1. Descargaremos la aplicación de __Eclair__ en nuestro móvil y la abriremos para que se sincronice
+Hay dos formas de usarlo la  y más fácil es la que vamos a utilizar hoy qué consiste en descargarse una aplicación llamada [Eclair](http://joedicastro.com) que permite usarlo directamente tirando de un nodo completo que está en otra parte.
+1. Descargaremos la aplicación de [Eclair](http://joedicastro.com) en nuestro móvil y la abriremos para que se sincronice
 2. Cargamos la cuenta con unos 2 € en bitcoin _(bloqueando BTC y obteniendo LBTC)_
 3. Creamos un canal con la dirección de la __Colm3na__
 4. Transmitimos unos pocos ___satoshis___ _(que van a ser milésimas de céntimo)_  
