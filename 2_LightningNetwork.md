@@ -1,3 +1,5 @@
+# __Lightning Network__: la capa de _Cash_ sobre Bitcoin
+
 __LN__ es la primera implementación de __Segwit__, que ha llevado más de 3 años _(un poco como el huevo y la gallina)_ en el que han participado no solo la Start-Up que la pensó llamada ___Lightning Labs___. Sino muchas otras empresas. _Como dato curioso, se creó un consorcio temporal a principios de año entre los departamentos de calculo computacional de las 70 universidades más potentes del mundo con la intención de valorar la viabilidad del proyecto._
 
 El funcionamiento es el siguiente: utilizando el espacio, del campo de notas, que nos da __SegWit__, abrímos una transacción y metemos un trozo de Smart contract. En un bloque futuro cerraremos la transacción con el resto del Smart contract. Eso significa que gastaremos el doble en tasas para realizar una transacción. Lógicamente esto solo es perder dinero y encima de manera más complicada.
@@ -15,7 +17,7 @@ Son los mineros de la Capa 1, es decir de __Bitcoin__, los que aseguran mediante
 Esto significa que tenemos una capa 1 con una seguridad desproporcionada y una capa 2 con una seguridad completamente disgregada y asegurada. No hay necesidad de montar capas de proof of work encima o detener nuevos dispositivos haciendo caros procesos.
 
 _______________________________
-# PRÁCTICA
+## __PRÁCTICA__
 _______________________________
 
 Hay dos formas de usarlo la  y más fácil es la que vamos a utilizar hoy qué consiste en descargarse una aplicación llamada [Eclair](http://joedicastro.com) que permite usarlo directamente tirando de un nodo completo que está en otra parte.
@@ -33,4 +35,4 @@ La otra forma es la versión purista, os la dejo aquí desarrollada para el que 
 3. Descargarse el cliente de Lightning Network también de [Eclair](http://joedicastro.com)
 4. Operar desde ahí _(seguir desde el paso 2 anterior)_
 
-___Por una cuestión de tiempo, realizaremos lo primero hoy y así podremos poner en marcha canales y probar cómo funciona.___
+##### _Por una cuestión de tiempo, realizaremos lo primero hoy y así podremos poner en marcha canales y probar cómo funciona._
