@@ -1,4 +1,4 @@
-#Pool de Lightning Network
+# Pool de Lightning Network
 
 "Inspirados" por la solución de ___BlockStream___, para evitar que se centralice __LN__ y para lucrarnos montando un __validadores__ en esta nueva capa, con vistas al futuro (actualmente los nodos mejor conectados están consiguiendo unos $5 al mes, que no es poco si tenemos en cuenta el uso que tiene y el tamaño de los canales).
 
