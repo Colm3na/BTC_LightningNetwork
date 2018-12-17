@@ -1,4 +1,4 @@
-# __Lightning Network__: la capa de _Cash_ sobre Bitcoin
+# __[Lightning Network](https://lightning.network/): la capa de _Cash_ sobre Bitcoin__
 
 __LN__ es la primera implementación de __Segwit__, que ha llevado más de 3 años _(un poco como el huevo y la gallina)_ en el que han participado no solo la Start-Up que la pensó llamada ___Lightning Labs___. Sino muchas otras empresas. _Como dato curioso, se creó un consorcio temporal a principios de año entre los departamentos de calculo computacional de las 70 universidades más potentes del mundo con la intención de valorar la viabilidad del proyecto._
 
@@ -18,10 +18,11 @@ Esto significa que tenemos una capa 1 con una seguridad desproporcionada y una c
 
 _______________________________
 ## __PRÁCTICA__
-_______________________________
 
-Hay dos formas de usarlo la  y más fácil es la que vamos a utilizar hoy qué consiste en descargarse una aplicación llamada [Eclair](http://joedicastro.com) que permite usarlo directamente tirando de un nodo completo que está en otra parte.
-1. Descargaremos la aplicación de [Eclair](http://joedicastro.com) en nuestro móvil y la abriremos para que se sincronice
+Hay dos formas de usarlo la  y más fácil es la que vamos a utilizar hoy qué consiste en descargarse una aplicación llamada [Eclair](https://github.com/ACINQ/eclair/releases) que permite usarlo directamente tirando de un nodo completo que está en otra parte.
+
+### Con nodo ligero
+1. Descargaremos la aplicación de [Eclair](https://github.com/ACINQ/eclair/releases) en nuestro móvil y la abriremos para que se sincronice
 2. Cargamos la cuenta con unos 2 € en bitcoin _(bloqueando BTC y obteniendo LBTC)_
 3. Creamos un canal con la dirección de la __Colm3na__
 4. Transmitimos unos pocos ___satoshis___ _(que van a ser milésimas de céntimo)_  
@@ -29,10 +30,63 @@ Hay dos formas de usarlo la  y más fácil es la que vamos a utilizar hoy qué c
 6. Y listo, ya podemos hacer transacciones entre nosotros _(todo ello lightning)_
 7. En el futuro cuando queramos, solo tenemos que cerrar el canal __unidireccionalmente__ para volver a cambiar los __lightning bitcoin__ por __bitcoin normales__.
 
-La otra forma es la versión purista, os la dejo aquí desarrollada para el que le interese despegarla después, qué consiste en:
-1. Descargarse el cliente de [Bitcoin Core](http://joedicastro.com)
+### Con nodo completo
+La otra forma es la versión purista, os la dejo aquí desarrollada para el que le interese despegarla después, qué viene desglosado en la siguiente [Guía de Lightning Network](https://medium.com/coinmonks/guide-setup-a-lightning-network-node-on-windows-8475206807f). Cuyos pasos principales son:
+1. Descargarse el cliente de [Bitcoin Core](https://bitcoin.org/en/download)
 2. Sincronizar la blockchain de Bitcoin en nodo completo _(2-3 días, unos 40 GB)_
-3. Descargarse el cliente de Lightning Network también de [Eclair](http://joedicastro.com)
-4. Operar desde ahí _(seguir desde el paso 2 anterior)_
+3. Alterar la configuración del nodo:
+        Bitcoin Core Configuration:
 
-##### _Por una cuestión de tiempo, realizaremos lo primero hoy y así podremos poner en marcha canales y probar cómo funciona._
+        testnet=0
+        server=1
+        rpcuser=your-rpc-user-here
+        rpcpassword=your-rpc-password-here
+        txindex=1 zmqpubrawblock=tcp://127.0.0.1:29000
+        zmqpubrawtx=tcp://127.0.0.1:29000
+        addresstype=p2sh-segwit
+        deprecatedrpc=signrawtransaction
+
+- También podemos crear una configuración para la Tesnet y la Mainnet en el mismo archivo de configuración
+
+        server=1
+        txindex=1
+        addresstype=p2sh-segwit
+        deprecatedrpc=signrawtransaction
+        [main]
+        rpcuser=<your-mainnet-rpc-user-here>
+        rpcpassword=<your-mainnet-rpc-password-here>
+        zmqpubrawblock=tcp://127.0.0.1:29000
+        zmqpubrawtx=tcp://127.0.0.1:29000
+        [test]
+        rpcuser=<your-testnet-rpc-user-here>
+        rpcpassword=<your-testnet-rpc-password-here>
+        zmqpubrawblock=tcp://127.0.0.1:29001
+        zmqpubrawtx=tcp://127.0.0.1:29001
+4. Descargarse el cliente de Lightning Network también de [Eclair desde Github](https://github.com/ACINQ/eclair/releases)
+5. Alterar la configuración del nodo:
+        Eclair Configuration:
+
+        eclair.chain=mainnet
+        eclair.bitcoind.rpcport=8332
+        eclair.bitcoind.rpcuser=yourusername
+        eclair.bitcoind.rpcpassword=yourpassword
+        eclair.node-alias=”your alias here (must be in double quotes)”
+        eclair.node-color=ff9900
+5. Operar desde ahí _(seguir desde el paso 2 anterior)_
+
+#### _Por una cuestión de tiempo, realizaremos lo primero hoy y así podremos poner en marcha canales y probar cómo funciona._
+
+_______________________________
+### Implementaciones de Lightning Network:
+
+ - [c-lightning](https://github.com/ElementsProject/lightning/releases)
+ - [eclair](https://github.com/ACINQ/eclair)
+ - [lnd](https://github.com/lightningnetwork/lnd)
+
+### Otros recursos:
+
+- [WhitePapper de Lightning Network](https://lightning.network/lightning-network-paper.pdf)
+- [Visualizador de Nodos en Testnet](https://explorer.acinq.co/)
+- [Visualizador de Nodos Mainnet](https://graph.lndexplorer.com/)
+- [Otro visualizador de Nodos Mainnet](https://rompert.com/recksplorer/)
+- [Visualizador de Nodos Mainnet en 3D](https://lnd3.vanilla.co.za/multinodegraphs/index.html)

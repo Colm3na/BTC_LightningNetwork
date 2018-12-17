@@ -16,6 +16,8 @@
 
   ![DriveChain](pictures/LOGO_DriveChain "DriveChain")
 
+  -__Elastos__: https://github.com/elastos/Elastos.ELA.SideChain/tree/master/blockchain
+
 
 _____________________________________________________________________________________________________________________
 
@@ -24,3 +26,5 @@ ________________________________________________________________________________
 - [Satoshi Place: muro de pintadas](https://satoshis.place/)
 - [Bici eléctrica activada con LN](https://github.com/leblitzdick/lightning-bike)
 - [: foro de pago con LN](https://)
+
+- [Explicación: Difernecia entre sidechain y state chanel](https://hackernoon.com/difference-between-sidechains-and-state-channels-2f5dfbd10707)
