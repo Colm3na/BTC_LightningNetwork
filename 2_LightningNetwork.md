@@ -75,7 +75,12 @@ La otra forma es la versión purista, os la dejo aquí desarrollada para el que 
 5. Operar desde ahí _(seguir desde el paso 2 anterior)_
 
 #### _Por una cuestión de tiempo, realizaremos lo primero hoy y así podremos poner en marcha canales y probar cómo funciona._
+_______________________________
+### Ejemplos de uso de __Lightning Network__:
 
+- [Satoshi Place: muro de pintadas](https://satoshis.place/)
+- [Bici eléctrica activada con LN](https://github.com/leblitzdick/lightning-bike)
+- [: foro de pago con LN](https://)
 _______________________________
 ### Implementaciones de Lightning Network:
 
@@ -83,6 +88,7 @@ _______________________________
  - [eclair](https://github.com/ACINQ/eclair)
  - [lnd](https://github.com/lightningnetwork/lnd)
 
+_______________________________
 ### Otros recursos:
 
 - [WhitePapper de Lightning Network](https://lightning.network/lightning-network-paper.pdf)
@@ -90,3 +96,4 @@ _______________________________
 - [Visualizador de Nodos Mainnet](https://graph.lndexplorer.com/)
 - [Otro visualizador de Nodos Mainnet](https://rompert.com/recksplorer/)
 - [Visualizador de Nodos Mainnet en 3D](https://lnd3.vanilla.co.za/multinodegraphs/index.html)
+- [Explicación: Diferencia entre sidechain y state chanel](https://hackernoon.com/difference-between-sidechains-and-state-channels-2f5dfbd10707)

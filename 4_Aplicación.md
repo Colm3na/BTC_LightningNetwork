@@ -11,3 +11,6 @@ Al crear todos canales hacia una dirección central, a la que vamos a llamar __C
 3. Al estar conectados de esta forma, damos más posibilidades de que cualquier envío que hagamos encuentre un camino y __no perdamos los fondos__
 
 4. Para dejar libres fondos y facilitar el uso del canal, debemos destinar la mitad del valor del canal al address de la __Colm3na__, eso puede usarse para crear un sistema de PoA para crear soluciones de __autogobierno__
+
+
+[Imagen de Red de LN](https)
