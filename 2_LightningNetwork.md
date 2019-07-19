@@ -16,6 +16,17 @@ Son los mineros de la Capa 1, es decir de __Bitcoin__, los que aseguran mediante
 
 Esto significa que tenemos una capa 1 con una seguridad desproporcionada y una capa 2 con una seguridad completamente disgregada y asegurada. No hay necesidad de montar capas de proof of work encima o detener nuevos dispositivos haciendo caros procesos.
 
+Lightning es permissionless:
+- No se necesita pedir por una cuenta
+- No pueden cerrarte la encuentra
+- No hay cierra ningún días
+- Ni tiene limitaciones geográficas
+
+Aún así, correr un nodo público de Lightning Network tiene requisitos:
+- __High Uptime:__ se requiere estar online para poder enrutar los pagos
+- __Hot Wallet:__ necesitaremos tener la clave secreta en dicho dispositivo para firmar
+- __Continuous Backups:__ si perdemos la BD de tx, perdemos los fondos
+
 _______________________________
 ## __PRÁCTICA__
 
