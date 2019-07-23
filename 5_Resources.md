@@ -7,7 +7,9 @@ _______________________________
 - https://symphony.iohk.io/  <= 3D muy llamativo
 - https://howmanyconfs.com/  <= Comparativa de seguridad entre blockchains
 
+
 #### de Lightning Network
+- __Lista:__ https://gist.github.com/bretton/798ec38165ffabc719d91e0f4f67552d
 - https://explorer.acinq.co/
 - https://1ml.com/
 - https://graph.lndexplorer.com/
@@ -95,6 +97,7 @@ _______________________________
 - __Bitcoin Script:__ lenguaje de programación de smart contracts en BTC https://en.bitcoin.it/wiki/Script
 - __Programming Bitcoin:__ de Jimmy Song, Learning hoy to program Bitcoin from scratch
 - __The Bitcoin Standard:__ Saifedean Ammous, The decentralized alternative to Central Banking
+- __Librería Python:__ https://github.com/petertodd/python-bitcoinlib
 
 #### de Lightning Network
 - __WhitePapper de Lightning Network:__ https://lightning.network/lightning-network-paper.pdf)
@@ -114,6 +117,7 @@ _______________________________
 - __Varias opciones simples y avanzadas de instalación:__ https://guggero.github.io/lightning-workshop/
 - __Explicación general:__ https://medium.com/coinmonks/intro-to-lightning-network-apps-lapps-b548c96ec13f
 - __Lista de lapps:__ https://dev.lightning.community/lapps/
+- __Lista muy completa de todo lo relacionado con LN:__ https://www.lopp.net/lightning-information.html
 - __Tutorial para Windows:__ https://medium.com/coinmonks/guide-setup-a-lightning-network-node-on-windows-8475206807f
 - __Instalación en unix:__ https://github.com/bitcoin/bitcoin/blob/master/doc/build-unix.md
 - __Eclair nodo completo:__ https://medium.com/coinmonks/guide-setup-a-lightning-network-node-on-windows-8475206807f
