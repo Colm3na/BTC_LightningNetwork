@@ -2,9 +2,9 @@
 
 Como se puede ver en la guía 6, 'Comandos para desplegar LND', mi compañero Víctor y yo estuvimos probando la testnet de la Lightning Network usando neutrino como cliente de bitcoin. Y aquí viene la serie de intentos fallidos y de horas invertidas en estas pruebas, que espero de veras ahorraros con esta guía.
 
-El gran problema que no tuvimos en cuenta es que en la Lightning Network hay principalmente dos tipos de nodos, los públicos y los privados o ocultos. Pues bien, cuando usamos un proveedor de wallets móviles como por ejemplo es Eclair, lo que nos dan es un nodo privado. Esto quiere decir que ningún nodo se puede conectar directamente a tu nodo, y que la única forma que tienes de comunicarte con el mundo exterior es abriendo canales con hubs o cualquier nodo público. <u>Sólo</u> a través de ellos puedes realizar las transacciones que quieras.
+El gran problema que no tuvimos en cuenta es que en la Lightning Network hay principalmente dos tipos de nodos, los públicos y los privados u ocultos. Pues bien, cuando usamos un proveedor de wallets móviles como por ejemplo es Eclair, lo que nos dan es un nodo privado. Esto quiere decir que ningún nodo se puede conectar directamente a tu nodo, y que la única forma que tienes de comunicarte con el mundo exterior es abriendo canales con hubs o cualquier nodo público. <u>Sólo</u> a través de ellos puedes realizar las transacciones que quieras.
 
-Esto no debería haber sido tanto problema, pero se complicó cuando descubrimos que el nodo que explicamos cómo desplegar en la sección/guía 6 con neutrino también era uno oculto. Por lo tanto, sólo podíamos comunicar nuestros nodos a través de otros, y no podíamos abrir canales entre nosotros dos, sólo con los públicos de la lightning-community, ACINQ, etc.
+Esto no debería haber sido tanto problema, pero se complicó cuando descubrimos que el nodo que explicamos cómo desplegar en la sección/guía 6 con neutrino también era uno oculto. Por lo tanto, solo podíamos comunicar nuestros nodos a través de otros, y no podíamos abrir canales entre nosotros dos, solo con los públicos de la lightning-community, ACINQ, etc.
 
 Por qué el nodo de la testnet con neutrino estaba oculto por defecto es algo que nos queda por investigar, porque en teoría no debería ser así.
 
@@ -171,7 +171,7 @@ Comprobamos la instalación con `go version`. Deberíamos recibir el siguiente o
 
 Vamos a usar de nuevo el cliente `lnd` de Lightning, escrito en go (de ahí el paso anterior).
 
-Otro cliente muy popular es `c-lightning`, de Blockstream, escrito naturalmente en C y que sólo funciona en Linux. También haremos pruebas con este cliente pero de momento nos ceñiremos a `lnd`.
+Otro cliente muy popular es `c-lightning`, de Blockstream, escrito naturalmente en C y que solo funciona en Linux. También haremos pruebas con este cliente pero de momento nos ceñiremos a `lnd`.
 
 Nos lo descargamos y lo instalamos:
 ```
@@ -226,7 +226,7 @@ Otra opción sería crear un script con el comando anterior y todos sus parámet
 
 2. Crear una wallet.
 
-Por último, sólo nos falta crear nuestra wallet en nuestro nodo de Lightning para empezar a hacer uso de él. Hacemos `lncli create` y pasamos por el siguiente proceso, en el cual se nos pide una contraseña para encriptar nuestra wallet y también si queremos usar una <i>seed phrase</i> que ya tengamos o, por el contrario, que nos la cree de cero.
+Por último, solo nos falta crear nuestra wallet en nuestro nodo de Lightning para empezar a hacer uso de él. Hacemos `lncli create` y pasamos por el siguiente proceso, en el cual se nos pide una contraseña para encriptar nuestra wallet y también si queremos usar una <i>seed phrase</i> que ya tengamos o, por el contrario, que nos la cree de cero.
 
 ```
 Input wallet password
@@ -241,7 +241,7 @@ Input an optional address look-ahead used to scan for used keys (default 2500):
 lnd successfully initialized
 ```
 
-Una vez tengamos tengamos el último mensaje, `lnd successfully initialized`, ya está todo preparado. Lo único a tener en cuenta es que, cada vez que paremos el nodo de Lightning, será necesario hacer `lncli unlock` y meter esa contraseña con la que hemos encriptado nuestra wallet de Lightning.
+Una vez tengamos el último mensaje, `lnd successfully initialized`, ya está todo preparado. Lo único a tener en cuenta es que, cada vez que paremos el nodo de Lightning, será necesario hacer `lncli unlock` y meter esa contraseña con la que hemos encriptado nuestra wallet de Lightning.
 
 Por eso, aunque en realidad podemos hacer con `lnd` igual que hemos hecho con `bitcoind` y configurarlo también como un servicio, en realidad no es posible hacerlo igual porque el nodo, al arrancar, siempre nos va a pedir esta contraseña, y tendremos que hacer manualmente `lncli unlock`.
 
@@ -256,13 +256,14 @@ Antes de nada, al ser nosotros un nodo público, podemos pedir a los demás que 
 Los pasos que voy a explicar ahora son haciendo la parte contraria que no se explicó en la guía 6. Es decir, en vez de conectarnos nosotros a un nodo, dejamos que se conecten a nosotros. Y, en lugar de enviar un pago para abrir un canal, creamos nosotros el invoice y se lo pasamos a nuestros peers para que sean ellos los que lo paguen y abran el canal.
 
 1. Dejar que se conecten a nosotros.
-Para conectarse a nuestro nodo, sólo tenemos que pasar nuestra URI. La consultamos haciendo:
+Para conectarse a nuestro nodo, solo tenemos que pasar nuestra URI. La consultamos haciendo:
 ```
 lncli getinfo
 ```
 y es el valor último del JSON que aparece, `uris`.
 
-La node-uri se compone por: <id-del-nodo>@<ip>:<puerto> 
+La node-uri se compone por: id-del-nodo@ip:puerto
+
 El puerto por defecto es el 9735 para el cliente `lnd`.
 
 Una vez se conecten a nosotros, podemos ver nuestros nuevos peers con `lncli listpeers`.
@@ -286,7 +287,7 @@ y hacemos
 cat <payment-request-1> | qrencode -l L -o qr.png
 ```
 
-Ese `qr.png` servirá para que todos aquellos que tienen wallets móviles puedan responder sólo escaneándolo a nuestro invoice.
+Ese `qr.png` servirá para que todos aquellos que tienen wallets móviles puedan responder solo escaneándolo a nuestro invoice.
 
 Una vez ellos realicen el pago de ese invoice, podremos ver cómo se está formando el canal entre ambos nodos haciendo `lncli pendingchannels`.
 
@@ -318,7 +319,7 @@ Y para ver la lista de todos los pagos realizados, haremos, como resulta intuiti
 
 
 
-1. Configurar `lnd` como un servicio gracias supervisor.
+1. Configurar `lnd` como un servicio gracias a supervisor.
 
 Primero paramos `lnd` e instalamos supervisor.
 ```
@@ -380,7 +381,7 @@ Así, aunque no podamos automatizar realmente el reinicio de `lnd` porque hay qu
 
 Hasta aquí de momento esta guía definitiva. Con estos pasos ya tendríais lo básico para empezar a moveros dentro de la Lightning Network. Pero por supuesto aún queda mucho por investigar. Iremos sacando más y mejores guías.
 
-Tan sólo señalar algunos de los recursos que han ayudado muchísimo en la creación de esta guía.
+Tan solo señalar algunos de los recursos que han ayudado muchísimo en la creación de esta guía.
 
 Por un lado, la guía clásica y mítica de bretton:
 https://gist.github.com/bretton/0b22a0503a9eba09df86a23f3d625c13
