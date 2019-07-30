@@ -28,6 +28,7 @@ _______________________________
 https://neutrinojs.org/installation/
 - __Bitcoin Core:__ (cliente más utilizado) https://bitcoincore.org/en/download/
 - __Bitcoin Testnet Privada:__ (más útil que la testnet general para enseñar y hacer pruebas) https://en.bitcoin.it/wiki/Signet
+- __Bitcoin Daemon:__ btcd https://github.com/btcsuite/btcd/tree/master/rpcclient
 
 #### de Lightning Network:
 - __LND:__ (en GO) https://github.com/lightningnetwork/lnd
@@ -108,7 +109,8 @@ _______________________________
 - __Plugin para WooCommerce:__ https://github.com/ElementsProject/woocommerce-gateway-lightning
 - __Plugin para Wordpress:__ https://github.com/ElementsProject/wordpress-lightning-publisher
 - __Aaron van Wirdum:__ https://bitcoinmagazine.com/articles/understanding-the-lightning-network-part-building-a-bidirectional-payment-channel-1464710791
-
+- __Tutorial LN en Simnet:__ https://dev.lightning.community/tutorial/index.html
+- __Otro tutorial:__ https://medium.com/@bitstein/setting-up-a-bitcoin-lightning-network-test-environment-ab967167594a
 
 _______________________________
 ## Explicaciones (probablemente mejores que las nuestras)
@@ -145,13 +147,17 @@ Wallet especial solo para el juego https://chrome.google.com/webstore/detail/btc
 _______________________________
 ## Otras cadenas laterales sobre BTC
 - __Liquid:__  
-Blockchain pública, permissionless, con Proof of Autorithy, donde Exchanges y grandes fondos de inversión hacen de validadores. Permite grandes movimientos de fondos entre Exchanges en 2 min
+Blockchain pública, permissionless, con Proof of Autorithy, donde Exchanges y grandes fondos de inversión hacen de validadores. Permite grandes movimientos de fondos entre Exchanges en 2 min. Creada por ___BlockStream___ como una capa de transmisión de grandes cantidades de dinero entre unos pocos usuarios. Sirve para el correcto funcionamiento de ___exchanges___ y otras autoridades que se estan creando en _CryptoLand_ Viene a ser __Ripple__ sobre __Bitcoin__. Los "usuarios" tienen que inscribirse en el sistema montado por ___BlockStream___, lo que lo convierte en un sistema de __Proof of Authority__
 https://blockstream.com/liquid/  
 https://docs.blockstream.com/liquid/technical_overview.html
 
 - __RSK:__  
-Con Merged Minning y la EVM
+Con Merged Minning y la EVM. Rootstock fue creada antes y funciona sin __Segwit__, y permite la creación de __Smart Contracts__ con la __EVM__ sobre __Bitcoin__. Esto nos da la flexibilidad  que ofrece ___Solidity___ (y en el futuro ___WASM___), cediendo la seguridad por completo al __PoW__ de __Bitcoin__.
 
+
+- __DriveChain__: proyecto en fase conceptual, pero muy interesante, también llamado State-Chains
+
+- __Elastos__: https://github.com/elastos/Elastos.ELA.SideChain/tree/master/blockchain
 
 _______________________________
 ## Futuras mejoras
